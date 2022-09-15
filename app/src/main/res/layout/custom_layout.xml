@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="StudentBinding">
+        <variable
+            name="viewModel"
+            type="com.example.mvvmpattern.StudentsViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/boeder"
+    android:layout_margin="3dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{viewModel.name}"
+        android:hint="name"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:id="@+id/nametxt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColor="#4CAF50"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@{viewModel.email}"
+        android:id="@+id/emailtxt"/>
+
+</LinearLayout>
+</layout>
